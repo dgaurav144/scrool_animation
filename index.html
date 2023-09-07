@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div id="div">
+        <img id="img4" src="./images/body.jpg" alt="">
+        <img id="img1"
+            src="https://png.pngtree.com/png-clipart/20230315/ourmid/pngtree-sun-cartoon-cute-doodle-png-image_6646859.png "
+            alt="">
+
+
+
+            
+            <img src="https://i.pinimg.com/originals/fa/d2/25/fad225214130494f40d2c8f22166aab4.gif" alt="" id="img2">
+            <img id="img5" src="https://images.pexels.com/photos/573238/pexels-photo-573238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div id="img3"></div>
+    </div>
+    <script>
+        var main = document.getElementById("div");
+        var img1 = document.getElementById("img1");
+        var img2 = document.getElementById("img2");
+        var img3 = document.getElementById("img3")
+        var img4 = document.getElementById("img4")
+        var img5 = document.getElementById("img5")
+
+        function scrollFun() {
+            var scrollValue = window.scrollY
+            if (scrollValue > 50 && scrollValue <= 200) {
+                img1.style.transform = "rotate(100deg)"
+                img1.style.opacity = "1"
+                img2.style.left ="35%"
+                img3.style.opacity = "0"
+                
+            }
+            if (scrollValue > 200 && scrollValue <= 400) {
+                img1.style.transform = "rotate(200deg)"
+                img1.style.opacity = "0.9"
+                img2.style.left ="40%"
+                img1.style.height="180px"
+                img3.style.opacity = "0"
+                img5.style.opacity = "0"
+                img4.style.opacity = "1"
+            }
+            if (scrollValue > 400 && scrollValue <= 600) {
+                img1.style.transform = "rotate(300deg)"
+                img1.style.opacity = "0.8"
+                img1.style.height="170px"
+                img2.style.opacity = "0.8"
+                img5.style.opacity = "0"
+                img4.style.opacity = "0.9"
+                img2.style.left ="45%"
+            }
+            if (scrollValue > 600 && scrollValue <= 800) {
+                img1.style.transform = "rotate(400deg)"
+                img1.style.opacity = "0.7"
+                img2.style.opacity = "0.7"
+                img2.style.left ="50%"
+                img1.style.height="150px"
+                img3.style.opacity = "0.6"
+                img4.style.opacity = "0.6"
+                img5.style.opacity = "0.4"
+                
+
+            }
+            if (scrollValue > 800 && scrollValue <= 1000) {
+                img1.style.transform = "rotate(500deg)"
+                img1.style.opacity = "0.3"
+                img2.style.opacity = "0.3"
+                img2.style.left ="55%"
+                img1.style.height="120px"
+                img3.style.opacity = "0.8"
+                img4.style.opacity = "0.8"
+                img5.style.opacity = "0.6"
+            }
+            if (scrollValue > 1200 && scrollValue <= 1400) {
+                img1.style.transform = "rotate(600deg)"
+                img1.style.opacity = "0"
+                img2.style.opacity = "0"
+                img3.style.opacity = "1"
+                img4.style.opacity = "0"
+                img5.style.opacity = "1"
+                
+            }
+            if (scrollValue > 1400 && scrollValue <= 1600) {
+                img1.style.transform = "rotate(700deg)"
+                img1.style.opacity = "0" 
+                img3.style.opacity = "1"
+                img5.style.opacity = "1"
+
+                
+            }
+            if (scrollValue > 1600 && scrollValue <= 1800) {
+                img1.style.transform = "rotate(800deg)"
+            }
+            if (scrollValue > 1800 && scrollValue <= 2000) {
+                img1.style.transform = "rotate(900deg)"
+            }
+        }
+        window.onscroll = scrollFun
+
+    </script>
+</body>
+
+</html>
